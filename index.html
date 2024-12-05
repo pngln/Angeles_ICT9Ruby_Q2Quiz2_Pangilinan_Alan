@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBMC Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("obmc.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .navbar-custom {
+            background-color: #007bff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #fff;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #d1ecf1;
+        }
+        .form-container {
+            background-color: mediumblue;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 1000px;
+            margin: 80px auto 20px; /* Add margin to account for the fixed navbar */
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f1c40f;
+        }
+        .btn-primary {
+            background-color: #f1c40f;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #e1b000;
+        }
+        .form-group label {
+            color: #d1d1d1;
+        }
+        select, input, textarea {
+            background-color: #0f3460;
+            color: #ffffff;
+            border: 1px solid #f1c40f;
+        }
+        @media (max-width: 768px) {
+            .form-row .col-md-6 {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="https://obmconline.com">OBMC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://obmconline.com">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.google.com/maps?q=OB+Montessori+Center+Angeles">Locate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://obmconline.com/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OBMC Registration Form -->
+    <div class="form-container">
+        <h2>OBMC Registration Form</h2>
+        <form novalidate>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Student Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter student's full name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" placeholder="Enter student's age">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Parent/Guardian Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email address">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Parent/Guardian Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Preferred Grade Level</label>
+                <select class="form-control" id="grade">
+                    <option value="">Choose a grade level...</option>
+                    <option value="preschool">Preschool</option>
+                    <option value="grade-school">Grade School</option>
+                    <option value="high-school">High School</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interest">Why Choose OBMC?</label>
+                <textarea class="form-control" id="interest" rows="3" placeholder="Share why you chose OBMC"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
